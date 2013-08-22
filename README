@@ -7,4 +7,9 @@
 
 monsv -sv.cmd=httpd   -sv.arg='-p' -sv.arg='80' \
       -log.cmd=svlogd -sv.arg='tt' \
-      -laddr=:8888
+      -laddr=:8888 &
+
+echo status | netcat localhost 8888
+
+httpd: up (pid 2977) 7.35s
+svlogd: up (pid 2974) 7.35s
