@@ -1,0 +1,10 @@
+
+
+    monsv
+
+    a service monitoring solution inspired by runsv
+
+
+monsv -sv.cmd=httpd   -sv.arg='-p' -sv.arg='80' \
+      -log.cmd=svlogd -sv.arg='tt' \
+      -laddr=:8888
